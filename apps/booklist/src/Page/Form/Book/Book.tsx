@@ -11,7 +11,7 @@ export class Book extends Component<bookProps> {
   }
   render() {
     return (
-      <tr>
+      <tr className='even:bg-slate-300 text-center *:capitalize *:font-semibold odd:bg-slate-200 *:p-2'>
         <td>{this.props.id}</td>
         <td>{this.props.title}</td>
         <td>{this.props.author}</td>

@@ -18,7 +18,10 @@ export class Form extends Component<{}, FormState> {
             title: '',
             author: '',
             year: '',
-            books: []
+            books: [
+                { id: 1, title: 'abbas', author: 'rezaei', year: '3243' },
+                { id: 2, title: 'mamad', author: 'javadi', year: '4264' },
+            ]
         }
 
     }
@@ -29,12 +32,20 @@ export class Form extends Component<{}, FormState> {
             author: this.state.author,
             year: this.state.year
         }
-        this.setState({ books: [...this.state.books, newBook] })
+        if (this.state.title.trim() && this.state.author.trim() && this.state.year.trim()) {
+            this.setState({
+                title: '',
+                author: '',
+                year: '',
+                books: [...this.state.books, newBook],
+            })
+        }
+
     }
     render() {
         return (
-            <div className="w-full h-full">
-                <div className="flex flex-col justify-around w-full h-3/4 ">
+            <div className="w-full flex flex-col gap-y-10 h-full">
+                <div className="flex flex-col justify-between w-full h-3/4 ">
                     <div>
                         <label className="font-semibold text-lg" htmlFor="Title">Title</label>
                         <input onChange={(e) => this.setState({ title: e.target.value })} value={this.state.title} type="text" className=" abbas rounded-lg " />
@@ -49,9 +60,9 @@ export class Form extends Component<{}, FormState> {
                     </div>
                     <button onClick={() => this.AddBook()} className="btn text-white">Add Book</button>
                 </div>
-                <table className="w-full h-auto  bg-slate-600">
-                    <thead>
-                        <tr>
+                <table className="w-full outline outline-slate-300 h-auto rounded-lg overflow-hidden ">
+                    <thead className='rounded-lg'>
+                        <tr className='bg-slate-400 rounded-lg *:p-2'>
                             <th>شماره</th>
                             <th>نام کتاب</th>
                             <th>نویسنده</th>
