@@ -1,0 +1,9 @@
+@import 'tailwindcss';
+@layer components {
+    .abbas {
+        @apply bg-white rounded-sm w-full p-2
+    }
+    .btn{
+        @apply bg-yellow-500 p-2 w-full rounded-lg font-semibold 
+    }
+}
