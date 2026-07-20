@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@layer components {
+    .navBtn {
+        @apply border-slate-300 border-b rounded-lg p-2 font-semibold cursor-pointer hover:bg-slate-300/60 transition-colors
+    }
+}
