@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@layer components {
+    .input {
+        @apply bg-white w-full rounded-lg p-2 ;
+    }
+    .btn {
+        @apply uppercase text-lg w-12 cursor-pointer  rounded-lg py-1 font-semibold ;
+    }
+}
