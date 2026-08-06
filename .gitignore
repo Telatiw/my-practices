@@ -3,7 +3,7 @@ pnpm-lock.yaml
 .vscode/
 .DS_Store
 dist/
-/apps/CMS/
+/apps/Menu/
 *.log
 *.tmp
 Thumbs.db
