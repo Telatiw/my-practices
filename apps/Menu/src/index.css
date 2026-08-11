@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer components {
+    .btnC {
+        @apply hover:bg-amber-700 hover:text-white cursor-pointer text-amber-700 rounded-lg font-medium py-1 px-2
+    };
+}
