@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import 'tailwindcss';
+@theme {
+  --color-siah:#001219;
+  --color-secondary:#f0f8ff;
+  --color-sefid:#ffffff;
+  --color-third:#d90429;
+}
+@utility centering {
+  @apply flex justify-center items-center;
+}
+body {
+  background-color: var(--color-secondary);
+  font-family: "Comfortaa" !important;
+}
